@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script type="importmap">
+        {
+        "imports": {
+            "@material/web/": "https://esm.run/@material/web/"
+        }
+        }
+    </script>
+    <script type="module">
+        import '@material/web/all.js';
+        import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+    
+        document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+    </script>
+    </head>
 
+    <body>
+        <!--<h1 id="headingID">Heading 1</h1>
+        <p>This is the text that needs to be generated.</p>
+        <button id="button">Click Me</button>-->
+        <script src = "index.js"></script>
+
+        <div class = "container">
+            <md-filled-text-field label="Input" type = "Name"></md-filled-text-field>
+            <md-fab>
+                <md-icon slot="icon">✎</md-icon>
+            </md-fab>
+            <md-elevated-button>One</md-elevated-button>
+            <md-elevated-button>Two</md-elevated-button>
+            <md-elevated-button>Three</md-elevated-button>
+        </div>
+
+        <style>
+            md-elevated-button {
+                padding: 10px;
+                margin: 5px;
+            }
+
+            .container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+        </style>
+    </body>
+</html>
